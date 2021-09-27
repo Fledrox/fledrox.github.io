@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" id="html" class="red">
+<html lang="en" id="html">
     <head>
         <link type="text/css" rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=roboto">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="loadfooter.js"></script>
         <title>
             HAHAHAHAHAHAHAHA
         </title>
@@ -12,33 +14,5 @@
         <span>You 404's lmaoooo how did you do that<br \><br  \>Anyways, you may wanna go back to the <a href="index.html">main page</a>.</span>
     </body>
     <footer>
-        <script>
-            function dark() {
-                var html = document.getElementById("html");
-                console.log(html);
-                    html.classList.remove("pink", "red");
-                    html.classList.add("dark");
-            }
-            function red() {
-                var html = document.getElementById("html");
-                console.log(html);
-                    html.classList.remove("pink", "dark");
-                    html.classList.add("red");
-            }
-            function pink() {
-                var html = document.getElementById("html");
-                console.log(html);
-                    html.classList.remove("dark", "red");
-                    html.classList.add("pink");
-            }
-        </script>
-        <br \><br \><a href="#">Theme</a>
-        <ul class="dropdown">
-            <li class="dropdown-item"><a id="red" href=# onclick="red();">Red</a></li>
-            <li class="dropdown-item"><a id="pink" href=# onclick="pink();">Pink</a></li>
-            <li class="dropdown-item"><a id="dark" href=# onclick="dark();">Dark</a></li>
-        </ul><br \>
-        <div>(c)Fledrox 2021
-        </div>
     </footer>
 </html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<script>
+var color = localStorage['color'] || "red";
+var html = document.getElementById("html");
+var palette = color;
+html.classList.add(color);
+
+    function red() {palette = 'red'; theme();}
+    function dark() {palette = 'dark'; theme(); }
+    function pink() {palette = 'pink'; theme();}
+
+    function theme() {
+        html.classList.remove("red", "pink", "dark");
+        color = palette;
+        html.classList.add(palette);
+    }
+
+    function voidcache() {
+        color = ''
+    }
+
+</script>
+<br \><br \><a href="#">Theme</a>
+<ul class="dropdown">
+    <li class="dropdown-item"><a id="red" onclick="red()">Red</a></li>
+    <li class="dropdown-item"><a id="pink" onclick="pink()">Pink</a></li>
+    <li class="dropdown-item"><a id="dark" onclick="dark()">Dark</a></li>
+    <li class="dropdown-item"><a id="voidcache" onclick="voidcache()">voidcache</a></li>
+</ul><br \>
+<div style ="padding-bottom: 20px;">(c)Fledrox 2021
+</div>

@@ -11,9 +11,9 @@
 }
 
 .pink {
-    --bg: #fbc7e3;
-    --col: #000000;
-    --hi: #f180d5;
+    --bg: #ffe8f8;
+    --col: #ff64cb;
+    --hi: #ff90e3;
 }
 
 body {
@@ -32,8 +32,9 @@ a {
 }
 
 footer {
-    position:absolute;
-    bottom: 20px;
+    float: left;
+    height: 20px;
+    width: 200px;
 }
 
 .title {
