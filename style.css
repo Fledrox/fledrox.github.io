@@ -5,15 +5,21 @@
 }
 
 .red {
-    --bg: #491616;
+    --bg: #641717;
     --col: #e66161;
     --hi: #fa6e55;
 }
 
 .pink {
-    --bg: #ffe8f8;
-    --col: #ff64cb;
+    --bg: #ffe3f6;
+    --col: #dd229f;
     --hi: #ff90e3;
+}
+
+.tree {
+    --bg: #263a2b;
+    --col: #1fcc4a;
+    --hi: #7aec97;
 }
 
 body {

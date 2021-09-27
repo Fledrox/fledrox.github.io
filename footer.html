@@ -8,9 +8,10 @@ html.classList.add(color);
     function red() {palette = 'red'; theme();}
     function dark() {palette = 'dark'; theme(); }
     function pink() {palette = 'pink'; theme();}
+    function tree() {palette = 'tree'; theme();}
 
     function theme() {
-        html.classList.remove("red", "pink", "dark");
+        html.classList.remove("red", "pink", "dark", "tree");
         color = palette;
         html.classList.add(palette);
     }
@@ -25,7 +26,8 @@ html.classList.add(color);
     <li class="dropdown-item"><a id="red" onclick="red()">Red</a></li>
     <li class="dropdown-item"><a id="pink" onclick="pink()">Pink</a></li>
     <li class="dropdown-item"><a id="dark" onclick="dark()">Dark</a></li>
-    <li class="dropdown-item"><a id="voidcache" onclick="voidcache()">voidcache</a></li>
+    <li class="dropdown-item"><a id="dark" onclick="tree()">Tree</a></li>
+    <!-- <li class="dropdown-item"><a id="voidcache" onclick="voidcache()">voidcache</a></li> -->
 </ul><br \>
 <div style ="padding-bottom: 20px;">(c)Fledrox 2021
 </div>
