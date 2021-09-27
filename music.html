@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html" class="red">
     <head>
         <link type="text/css" rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=roboto">
@@ -20,8 +20,8 @@
             <a href="https://youtu.be/uzSgbomtdcg">DV-i - Configuration</a><br \>
             <a href="https://youtu.be/UXGQ40r4at8">Le Knight Club - Boogie Shell</a><br \>
             <a href="https://www.youtu.be/v9--3fuvGvc">Siriusmo - Congratulator</a><br \>
+            <a href="https://www.youtube.com/watch?v=_jc1BHQQJLc" ></a>Nintendo 3DS Firmware Soundtrack - Internet Settings<br \>
          <!--   <a href="" ></a><br \>
-            <a href="" ></a><br \>
             <a href="" ></a><br \>
             <a href="" ></a><br \>
             <a href="" ></a><br \> -->
@@ -30,7 +30,32 @@
         
     </body>
     <footer>
-        <br \><br \>
+        <script>
+            function dark() {
+                var html = document.getElementById("html");
+                console.log(html);
+                    html.classList.remove("pink", "red");
+                    html.classList.add("dark");
+            }
+            function red() {
+                var html = document.getElementById("html");
+                console.log(html);
+                    html.classList.remove("pink", "dark");
+                    html.classList.add("red");
+            }
+            function pink() {
+                var html = document.getElementById("html");
+                console.log(html);
+                    html.classList.remove("dark", "red");
+                    html.classList.add("pink");
+            }
+        </script>
+        <br \><br \><a href="#">Theme</a>
+        <ul class="dropdown">
+            <li class="dropdown-item"><a id="red" href=# onclick="red();">Red</a></li>
+            <li class="dropdown-item"><a id="pink" href=# onclick="pink();">Pink</a></li>
+            <li class="dropdown-item"><a id="dark" href=# onclick="dark();">Dark</a></li>
+        </ul><br \>
         <div>(c)Fledrox 2021
         </div>
     </footer>
