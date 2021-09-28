@@ -1,9 +1,12 @@
 <!DOCTYPE html>
 <script>
-var color = localStorage['color'] || "red";
-var html = document.getElementById("html");
-var palette = color;
-html.classList.add(color);
+    var color = localStorage['color'] || "red";
+    var html = document.getElementById("html");
+    var palette =color;
+
+    $(document).ready(function(){
+        $("#html").attr('class', color);
+    });
 
     function red() {palette = 'red'; theme();}
     function dark() {palette = 'dark'; theme(); }
@@ -11,9 +14,8 @@ html.classList.add(color);
     function tree() {palette = 'tree'; theme();}
 
     function theme() {
-        html.classList.remove("red", "pink", "dark", "tree");
-        color = palette;
-        html.classList.add(palette);
+        localStorage['color'] = palette;
+        $("#html").attr('class', localStorage['color']);
     }
 
     function voidcache() {
@@ -26,7 +28,7 @@ html.classList.add(color);
     <li class="dropdown-item"><a id="red" onclick="red()">Red</a></li>
     <li class="dropdown-item"><a id="pink" onclick="pink()">Pink</a></li>
     <li class="dropdown-item"><a id="dark" onclick="dark()">Dark</a></li>
-    <li class="dropdown-item"><a id="dark" onclick="tree()">Tree</a></li>
+    <li class="dropdown-item"><a id="tree" onclick="tree()">Tree</a></li>
     <!-- <li class="dropdown-item"><a id="voidcache" onclick="voidcache()">voidcache</a></li> -->
 </ul><br \>
 <div style ="padding-bottom: 20px;">(c)Fledrox 2021
