@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <script>
-    var color = localStorage['color'] || "red";
+    var color = localStorage['color'] || "forest";
     var html = document.getElementById("html");
     var palette =color;
 
@@ -8,11 +8,9 @@
         $("#html").attr('class', color);
     });
 
-    function red() {palette = 'red'; theme();}
-    function dark() {palette = 'dark'; theme(); }
-    function pink() {palette = 'pink'; theme();}
-    function tree() {palette = 'tree'; theme();}
-
+    function pre(col) {
+        palette = col; theme();
+    }
     function theme() {
         localStorage['color'] = palette;
         $("#html").attr('class', localStorage['color']);
@@ -23,13 +21,28 @@
     }
 
 </script>
-<br \><br \><a href="#">Theme</a>
-<ul class="dropdown">
-    <li class="dropdown-item"><a id="red" onclick="red()">Red</a></li>
-    <li class="dropdown-item"><a id="pink" onclick="pink()">Pink</a></li>
-    <li class="dropdown-item"><a id="dark" onclick="dark()">Dark</a></li>
-    <li class="dropdown-item"><a id="tree" onclick="tree()">Tree</a></li>
+<script>
+    function popup() {
+        var popup = document.getElementById("myPopup");
+        if ( popup.classList.contains('hidden') ) {
+            popup.classList.remove('hidden')
+        } else {
+            popup.classList.add('hidden')
+        }
+        console.log(popup);
+    }
+</script>
+
+<br \><br \>
+<div class="popup" onclick="popup()">Theme</div>
+<span class="popuptext hidden container" id="myPopup">
+    <a class="dropdown-item" id="forest" onclick="pre('forest')">Forest</a><p class="breaker"></p>
+    <a class="dropdown-item" id="red" onclick="pre('red')">Red</a><p class="breaker"></p>
+    <a class="dropdown-item" id="pink" onclick="pre('pink')">Pink</a><p class="breaker"></p>
+    <a class="dropdown-item" id="dark" onclick="pre('dark')">Dark</a><p class="breaker"></p>
+    <a class="dropdown-item" id="tree" onclick="pre('tree')">Tree</a><p class="breaker"></p>
+    <a class="dropdown-item" id="tree" onclick="pre('bsod')">BsoD</a><p class="breaker"></p>
     <!-- <li class="dropdown-item"><a id="voidcache" onclick="voidcache()">voidcache</a></li> -->
-</ul><br \>
-<div style ="padding-bottom: 20px;">(c)Fledrox 2021
+</span></div><br \>
+<div style ="padding-bottom: 20px">(c)Fledrox 2021
 </div>

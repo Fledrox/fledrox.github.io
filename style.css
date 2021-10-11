@@ -1,25 +1,33 @@
+/* Colors */
+.forest{
+    --bg: #000;
+    --col: #007f00;
+    --hi: #00c000;
+}
 .dark{
     --bg: #383838;
     --col: #b8beca;
     --hi: #6d6d6d;
 }
-
 .red {
     --bg: #641717;
     --col: #e66161;
     --hi: #fa6e55;
 }
-
 .pink {
     --bg: #ffe3f6;
     --col: #dd229f;
     --hi: #ff90e3;
 }
-
 .tree {
     --bg: #263a2b;
     --col: #1fcc4a;
     --hi: #7aec97;
+}
+.bsod{
+    --bg: #00f;
+    --col: #fff;
+    --hi: #000;
 }
 
 body {
@@ -48,42 +56,79 @@ footer {
     font: "slab";
 }
 
+#subtext {
+    display:flex;
+    font-size: 50;
+
+    animation-name: minecraft;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+}
+    #movingtext {
+        width: 200px;
+        color:yellow;
+        transform: translate(200px,-50px) rotate(-30deg);
+    
+    }
+    @keyframes minecraft {
+        0% {
+            transform: scale(90%);
+        }
+        50% {
+            transform: scale(120%);
+        }
+        100% {
+            transform: scale(90%);
+        }
+    }
+
 .container {
     display: flex;
     flex-wrap: wrap;
     flex-flow: row wrap;
     justify-content: space-between;
 }
-.breaker {
-display: none;
-}
-.breaker:nth-child(3n) {
-display: block;
-width: auto;
-height: 0;
-}
-
-.dropdown {
-    opacity:100;
-}
+    .breaker {
+    display: none;
+    }
+        .breaker:nth-child(3n) {
+        display: block;
+        width: auto;
+        height: 0;
+        }
 
 /* SCROLL BAR */
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
 }
-  
-/* Track */
-::-webkit-scrollbar-track {
-background: var(--bg);
-}
+    /* Track */
+    ::-webkit-scrollbar-track {
+    background: var(--bg);
+    }
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: var(--col);
+    }
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+    background: var(--hi);
+    }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-background: var(--col);
+.popup {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
+    .hidden {
+        visibility: hidden;
+    }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-background: var(--hi);
+#links {
+    color: var(--bg);
+    background-color: var(--col);
 }
