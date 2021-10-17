@@ -1,20 +1,45 @@
 <!DOCTYPE html>
 <html lang="en" id="html">
     <head>
+
         <link type="text/css" rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=roboto">
         <script src="jquery.js"></script>
-        <script src="loadfooter.js"></script>
+        <script src="scripts.js"></script>
         <br \><br \>
-        <title>
-            Fledrox's place
+        <title>Fledrox's Place
         </title>
     </head>
     <body>
-        <h1 class="text">
-            Fledrox's place
-        </h1>
-        <div id="subtext"><span id="movingtext">I learned css for this</span></div>
+<pre>██████▒▒██▒▒    ██████▒▒████▒▒  ████▒▒  ████▒▒  ██  ██▒▒
+██▒▒    ██▒▒    ██▒▒    ██▒▒██▒▒██▒▒██▒▒██▒▒██▒▒██  ██▒▒
+████▒▒  ██▒▒    ████▒▒  ██▒▒██▒▒████▒▒  ██▒▒██▒▒  ██▒▒  
+██▒▒    ██▒▒    ██▒▒    ██▒▒██▒▒██▒▒██▒▒██▒▒██▒▒██  ██▒▒
+██▒▒    ██████▒▒██████▒▒████▒▒  ██▒▒██▒▒  ████▒▒██  ██▒▒</pre>
+        <div id="subtext"><span id="movingtext">Test
+        </span></div>
+        <script type="text/javascript">
+        /* RANDOMISES YELLOW SUBTEXT TEXT (id: movingtext) */
+            function subtext() {
+                var titles=[
+                    "Sick tricks bro",
+                    "Shoutouts to WirtualTM",
+                    "Also check pinkcig.xyz",
+                    "Long live FOSS",
+                    "I wish I had the time to skate",
+                    "antialiasing :(",
+                    "CSS stands for Cool Story Sweetie",
+                    "Striped Thigh Highs 4evR",
+                    "society",
+                    "Oh so you're shilling? You're shilling and farthing?",
+                    "I like Minecraft",
+                    "Overthrow the fast food industry! Home cooking remains glorious!",
+                    "CAN YOU DIGGIT? -Flamingosis",
+                    "how win free robox no scam"
+                ];
+                return titles[Math.floor((Math.random() * Object.keys(titles).length))];
+            }
+            document.getElementById("movingtext").innerHTML = subtext();
+        </script>
         <h3><a href="bio.html">Bio</a></h3>
         <h3><a href="music.html">Playlist</a></h3>
         <h3><a href="links.html">Cool links</a></h3>

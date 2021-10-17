@@ -1,14 +1,22 @@
 /* Colors */
 .forest{
-    --bg: #000;
-    --col: #007f00;
+    --bg: #000000;
+    --col: #008000;
     --hi: #00c000;
 }
-.dark{
+.grey{
     --bg: #383838;
     --col: #b8beca;
     --hi: #6d6d6d;
 }
+
+.dark{
+    --bg: #000;
+    --col:#777;
+    --hi: #fff;
+
+}
+
 .red {
     --bg: #641717;
     --col: #e66161;
@@ -30,25 +38,41 @@
     --hi: #000;
 }
 
-body {
+@font-face {
+    font-family: "Clacon";
+    font-weight: normal;
+    src: url("clacon2.ttf");
+}
+
+html {
     background-color: var(--bg);
-    padding-left: 10%;
-    padding-right: 10%;
+    padding-left: 5%;
+    padding-right: 5%;
     color: var(--col);
-    font-family: 'roboto', monospace;
+    font-family: Clacon;
+    font-size: 20px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: normal;
+    font-kerning: auto;
 }
 
 a {
-    color:currentColor;
-    border-bottom: 1px dashed currentColor;
+    color: var(--bg);
+    background-color: var(--col);
     text-decoration: none;
-    
+    font-weight: bolder;
+    font-smooth: never;
+    -webkit-font-smoothing : none;
 }
 
 footer {
     float: left;
     height: 20px;
-    width: 200px;
+    width: 100%;
 }
 
 .title {
@@ -61,15 +85,16 @@ footer {
     font-size: 50;
 
     animation-name: minecraft;
-    animation-duration: 5s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     animation-timing-function: ease-in-out;
 }
     #movingtext {
+        text-align: center;
         width: 200px;
         color:yellow;
-        transform: translate(200px,-50px) rotate(-30deg);
+        transform: translate(400px,-50px) rotate(-30deg);
     
     }
     @keyframes minecraft {
