@@ -51,8 +51,11 @@ html {
     padding-right: 0%; /* 5% */
     color: var(--col);
     font-family: Clacon;
-    font-size: 20px;
+
     overflow-x: hidden;
+    display: block;
+    font-size: 2.5vh;
+    width: auto;
 }
 
 h1 {
@@ -168,4 +171,10 @@ hr{
 #links {
     color: var(--bg);
     background-color: var(--col);
+}
+
+#leaf{
+    display: flex;
+    max-width: 0.8vw;
+    font-size: 2vh;
 }
