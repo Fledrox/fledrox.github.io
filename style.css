@@ -46,8 +46,8 @@
 
 html {
     background-color: var(--bg);
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 0%; /* 5% */
+    padding-right: 0%; /* 5% */
     color: var(--col);
     font-family: Clacon;
     font-size: 20px;
@@ -73,6 +73,17 @@ footer {
     float: left;
     height: 20px;
     width: 100%;
+}
+
+pre{
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+hr{
+    border-color: var(--col);
+    border-style:dashed;
+    border-width: 2px;
 }
 
 .title {
