@@ -1,50 +1,39 @@
 <!DOCTYPE html>
+
 <script>
-    var color = localStorage['color'] || "forest";
-    var html = document.getElementById("html");
-    var palette =color;
+    var setColor = localStorage['color'] || "forest";
+    var html = document.getElementById('html')
 
     $(document).ready(function(){
-        $("#html").attr('class', color);
-    });
+            $("#html").attr('class', setColor);
+            document.getElementById(themeForm).attr(Selection, setColor);
+        });
 
-    function pre(col) {
-        palette = col; theme();
-    }
-    function theme() {
-        localStorage['color'] = palette;
+
+    function themeSelect(foo) {
+        localStorage['color'] = foo;
         $("#html").attr('class', localStorage['color']);
-    }
-
-    /*
-    function voidcache() {
-        color = ''
-    }
-    */
-
-</script>
-<script>
-    function popup() {
-        var popup = document.getElementById("myPopup");
-        if ( popup.classList.contains('hidden') ) {
-            popup.classList.remove('hidden')
-        } else {
-            popup.classList.add('hidden')
-        }
-        console.log(popup);
+        console.log("Changed theme to", foo)
     }
 </script>
 
-<br \><br \>
-<div class="popup" onclick="popup()">Theme</div>
-<span class="popuptext hidden" id="myPopup">
-    <a class="dropdown-item" id="forest" onclick="pre('forest')">Forest </a>
-    <a class="dropdown-item" id="red" onclick="pre('red')">Red </a>
-    <a class="dropdown-item" id="pink" onclick="pre('pink')">Pink </a>
-    <a class="dropdown-item" id="grey" onclick="pre('grey')">Grey </a>
-    <a class="dropdown-item" id="tree" onclick="pre('tree')">Tree </a>
-    <a class="dropdown-item" id="bsod" onclick="pre('bsod')">BsoD </a>
-    <a class="dropdown-item" id="dark" onclick="pre('dark')">Dark </a>
-</span></div><br \>
-<div style ="padding-bottom: 20px">(c)Fledrox 2021
-</div>
+
+<div><hr/>
+    <form class="noselect" id="themeForm">
+        <select name = "theme" onchange="themeSelect(value)">
+            <option value = "none" selected disabled hidden>Theme</option>
+            <option value = "forest">Forest</option>
+            <option value = "red">Red</option>
+            <option value = "pink">Pink</option>
+            <option value = "grey">Grey</option>
+            <option value = "tree">Tree</option>
+            <option value = "bsod">BsoD</option>
+            <option value = "dark">Dark</option>
+        </select>
+    </form>
+<div>
+<p>(c)Fledrox 2021 - Contact: 
+    <a href="https://twitter.com/fledrox" target="_blank">Twitter</a> or 
+    <a href="https://discord.gg/8tQ6cPd" target="_blank">
+    Discord</a>
+</p>

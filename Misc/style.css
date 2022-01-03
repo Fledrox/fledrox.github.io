@@ -95,6 +95,18 @@ hr{
     font: "slab";
 }
 
+select {
+    font:inherit;
+    color: inherit;
+    background-color: var(--bg);
+    height: auto;
+    padding-top: 5px;
+    border-color: var(--col);
+    white-space: none;
+}
+
+
+
 #subtext {
     display:flex;
     font-size: 50;
@@ -109,7 +121,7 @@ hr{
         text-align: center;
         width: 200px;
         color:yellow;
-        transform: translate(400px,-50px) rotate(-30deg);
+        transform: translate(250px,-50px) rotate(-30deg);
     
     }
     @keyframes minecraft {
@@ -124,25 +136,21 @@ hr{
         }
     }
 
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
-    .breaker {
-    display: none;
+.noselect {
+    -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+            -moz-user-select: none; /* Old versions of Firefox */
+            -ms-user-select: none; /* Internet Explorer/Edge */
+                user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+/*credit to blowsie on stackoverflow*/
     }
-        .breaker:nth-child(3n) {
-        display: block;
-        width: auto;
-        height: 0;
-        }
 
 /* SCROLL BAR */
 /* width */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
 }
     /* Track */
     ::-webkit-scrollbar-track {
@@ -155,17 +163,6 @@ hr{
     /* Handle on hover */
     ::-webkit-scrollbar-thumb:hover {
     background: var(--hi);
-    }
-
-.popup {
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-}
-    .hidden {
-        visibility: hidden;
     }
 
 #links {
