@@ -126,7 +126,21 @@ hr{
     font: "slab";
 }
 
-select {
+textarea {
+    display: flex;
+  }
+
+#type-area{
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    border-style: none; 
+    border-color: Transparent; 
+    overflow: auto; 
+    outline: none;
+}
+  
+select, form, input{
     font:inherit;
     color: inherit;
     background-color: var(--bg);
