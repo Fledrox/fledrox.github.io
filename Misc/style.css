@@ -67,24 +67,15 @@
 };
 */
 
-
-@font-face {
-    font-family: "Clacon";
-    font-family: monospace;
-    font-weight: normal;
-    src: url("clacon2.ttf");
-}
-
 html {
     background-color: var(--bg);
-    padding-left: 0%; /* 5% */
-    padding-right: 0%; /* 5% */
+    padding: 30px 5% 30px 5%;
     color: var(--col);
-    font-family: Clacon;
+    font-family: 'VT323', monospace;
 
     overflow-x: hidden;
     display: block;
-    font-size: 2.5vh;
+    font-size: 3vh;
     width: auto;
 }
 
@@ -174,7 +165,7 @@ select, form, input{
         text-align: center;
         width: 200px;
         color:var(--hi);
-        transform: translate(250px,-50px) rotate(-30deg);
+        transform: translate(250px,-50px) rotate(-20deg);
     
     }
     @keyframes minecraft {
@@ -224,22 +215,25 @@ select, form, input{
 }
 
 #leaf{
-    display: flex;
+    display: flexbox -ms-flexbox -webkit-flex;
     max-width: 0.8vw;
-    font-size: 2vh;
+    font-size: 1.5vh;
 }
 
 
 .gallery {
-  border: 2px solid var(--col);
+  background-color: var(--col);
   float: left;
   width: 180px;
   max-width: 180px;
   height: 180px;
   max-height: 180px;
+  margin: 0 20px 20px 0;
+  border: 2px solid var(--col);
 }
 
 .gallery:hover {
+  background-color: var(--hi);
   border: 2px solid var(--hi);
 }
 
@@ -250,6 +244,19 @@ select, form, input{
     max-height: 180px;
     object-fit: cover;
     object-position: 50% 50%;
+}
+
+.img-link {
+    background: none;
+    background-color: transparent;
+    width: 0;
+    height: 0;
+}
+
+.flag {
+    background: rgb(29,101,214);
+    background: linear-gradient(90deg, rgb(0, 62, 161) 33%, rgb(255, 255, 255) 34%, rgb(255, 255, 255) 66%,rgb(187, 9, 9) 67%);
+    color:inherit
 }
 
  /* end */
