@@ -1,4 +1,4 @@
 $(document).ready(function(){
-    $("footer").load("./footer.html");
+    $("footer").load("../config/footer.html");
     
 });
