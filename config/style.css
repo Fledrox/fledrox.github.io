@@ -93,6 +93,11 @@ a {
     font-weight: bolder;
     font-smooth: never;
     -webkit-font-smoothing : none;
+    transition-duration: 0.2s;
+}
+a:hover {
+    background-color: var(--hi);
+    color: var(--col);
 }
 
 footer {
@@ -247,6 +252,7 @@ select, form, input{
   max-height: 180px;
   margin: 0 20px 20px 0;
   border: 2px solid var(--col);
+  transition-duration: 0.2s;
 }
 
 .gallery:hover {
@@ -275,5 +281,4 @@ select, form, input{
     background: linear-gradient(90deg, rgb(0, 62, 161) 33%, rgb(255, 255, 255) 34%, rgb(255, 255, 255) 66%,rgb(187, 9, 9) 67%);
     color:inherit
 }
-
  /* end */
